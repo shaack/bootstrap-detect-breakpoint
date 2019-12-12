@@ -1,0 +1,26 @@
+{
+  "name": "bootstrap-detect-breakpoint",
+  "version": "1.0.0",
+  "description": "Detect the current Bootstrap 4 breakpoint in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaack/bootstrap-detect-breakpoint.git"
+  },
+  "keywords": [
+    "Bootrap",
+    "Bootstrap",
+    "4",
+    "JavaScript",
+    "Tools"
+  ],
+  "author": "shaack.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shaack/bootstrap-detect-breakpoint/issues"
+  },
+  "homepage": "https://github.com/shaack/bootstrap-detect-breakpoint#readme"
+}
