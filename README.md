@@ -15,7 +15,14 @@ Get the current breakpoint with
 ```js
 DetectBreakpoint.current() 
 ```
+which will return an object with the current breakpoint name and index,
+like this
 
-which will return "xs", "sm", "md", "lg" or "xl".
+```json
+{
+    "name": "lg",
+    "index": 3
+}
+```
 
-
+The index goes fro 0-4, where 0 is "xs" and 4 is "xl".

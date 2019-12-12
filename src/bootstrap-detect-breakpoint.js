@@ -1,4 +1,4 @@
-const DetectBreakpoint = (function() {
+const DetectBreakpoint = (function () {
     const breakpointNames = ["xl", "lg", "md", "sm", "xs"]
     let breakpointValues = []
     for (const breakpointName of breakpointNames) {
@@ -6,12 +6,14 @@ const DetectBreakpoint = (function() {
     }
     return {
         current: () => {
+            let i = breakpointNames.length
             for (const breakpointName of breakpointNames) {
-                if(window.matchMedia("(min-width: " + breakpointValues[breakpointName] + ")").matches) {
-                    return breakpointName
+                i--
+                if (window.matchMedia("(min-width: " + breakpointValues[breakpointName] + ")").matches) {
+                    return {name: breakpointName, index: i}
                 }
             }
             return null
         }
     }
-})();
+})()
