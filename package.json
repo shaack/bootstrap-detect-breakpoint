@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-detect-breakpoint",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Detect the current Bootstrap 4 breakpoint in JavaScript",
   "main": "index.js",
   "scripts": {
