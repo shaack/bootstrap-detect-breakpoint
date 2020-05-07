@@ -13,7 +13,7 @@ Include the `bootstrap-detect-breakpoint.js`.
 Get the current breakpoint with
 
 ```js
-DetectBreakpoint.current() 
+var currentBreakpoint = bootstrapDetectBreakpoint() 
 ```
 which will return an object with the current breakpoint name and index,
 like this
@@ -25,4 +25,4 @@ like this
 }
 ```
 
-The index goes fro 0-4, where 0 is "xs" and 4 is "xl".
+The index goes from 0 to 4, where 0 is "xs" and 4 is for "xl".

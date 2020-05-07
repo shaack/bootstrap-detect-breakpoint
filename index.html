@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bootstrap 4 Detect Breakpoint</title>
+    <title>Bootstrap 4 detect breakpoints</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <script src="src/bootstrap-detect-breakpoint.js"></script>
+<div class="container-fluid">
+    <h1>bootstrap-detect-breakpoint</h1>
+    <div class="card">
+        <div class="card-body">
+            Current breakpoint <span id="breakpoint"></span>
+        </div>
+    </div>
+</div>
+<script src="src/bootstrap-detect-breakpoint.js"></script>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script>
+    var $output = $("#breakpoint")
+
+    function updateView() {
+        var currentBreakpoint = bootstrapDetectBreakpoint()
+        $output.html("name: <b>" + currentBreakpoint.name + "</b>, index: <b>" + currentBreakpoint.index + "</b>")
+    }
+
+    updateView()
+    $(window).on("resize", updateView)
+</script>
 </body>
 </html>

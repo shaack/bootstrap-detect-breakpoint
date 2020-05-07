@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/shaack/bootstrap-detect-breakpoint/issues"
   },
-  "homepage": "https://github.com/shaack/bootstrap-detect-breakpoint#readme"
+  "homepage": "https://github.com/shaack/bootstrap-detect-breakpoint#readme",
+  "devDependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
 }
