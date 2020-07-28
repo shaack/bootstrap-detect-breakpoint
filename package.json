@@ -11,11 +11,10 @@
     "url": "git+https://github.com/shaack/bootstrap-detect-breakpoint.git"
   },
   "keywords": [
-    "Bootrap",
-    "Bootstrap",
-    "4",
+    "bootstrap",
+    "bootstrap 4",
     "JavaScript",
-    "Tools"
+    "UI"
   ],
   "author": "shaack.com",
   "license": "MIT",
