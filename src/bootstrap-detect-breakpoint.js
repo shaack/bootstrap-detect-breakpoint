@@ -1,13 +1,16 @@
 const bootstrapDetectBreakpoint = function () {
-    const breakpointNames = ["xl", "lg", "md", "sm", "xs"]
-    let breakpointValues = []
-    for (const breakpointName of breakpointNames) {
-        breakpointValues[breakpointName] = window.getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-' + breakpointName)
+    // cache some values on first call
+    if (!this.breakpointValues) {
+        this.breakpointNames = ["xl", "lg", "md", "sm", "xs"]
+        this.breakpointValues = []
+        for (const breakpointName of this.breakpointNames) {
+            this.breakpointValues[breakpointName] = window.getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-' + breakpointName)
+        }
     }
-    let i = breakpointNames.length
-    for (const breakpointName of breakpointNames) {
+    let i = this.breakpointNames.length
+    for (const breakpointName of this.breakpointNames) {
         i--
-        if (window.matchMedia("(min-width: " + breakpointValues[breakpointName] + ")").matches) {
+        if (window.matchMedia("(min-width: " + this.breakpointValues[breakpointName] + ")").matches) {
             return {name: breakpointName, index: i}
         }
     }

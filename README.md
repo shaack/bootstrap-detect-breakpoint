@@ -2,6 +2,8 @@
 
 Detect the current Bootstrap 4 breakpoint in JavaScript.
 
+[Demo Page: https://shaack.com/projekte/bootstrap-detect-breakpoint/](https://shaack.com/projekte/bootstrap-detect-breakpoint/)
+
 ## Usage
 
 Include the `bootstrap-detect-breakpoint.js`.

@@ -4,26 +4,43 @@
     <meta charset="UTF-8">
     <title>Bootstrap 4 detect breakpoints</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        pre {
+            background-color: #eee;
+            padding: 0 1.5rem;
+        }
+    </style>
 </head>
 <body>
 <div class="container-fluid">
     <h1>bootstrap-detect-breakpoint</h1>
-    <div class="card">
+    <div class="card mb-4">
         <div class="card-body">
-            Current breakpoint <span id="breakpoint"></span>
+            Current breakpoint: <span id="breakpoint-output"></span>
         </div>
     </div>
+    <pre><code>
+const $output = $("#breakpoint-output")
+
+function updateView() {
+    const currentBreakpoint = bootstrapDetectBreakpoint()
+    $output.html("<code>" + JSON.stringify(currentBreakpoint) + "</code>")
+}
+
+updateView()
+$(window).on("resize", updateView)
+    </code></pre>
 </div>
 <script src="src/bootstrap-detect-breakpoint.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    var $output = $("#breakpoint")
+    const $output = $("#breakpoint-output")
 
     function updateView() {
-        var currentBreakpoint = bootstrapDetectBreakpoint()
-        $output.html("{ name: <b>" + currentBreakpoint.name + "</b>, index: <b>" + currentBreakpoint.index + " }</b>")
+        const currentBreakpoint = bootstrapDetectBreakpoint()
+        $output.html("<code>" + JSON.stringify(currentBreakpoint) + "</code>")
     }
 
     updateView()
