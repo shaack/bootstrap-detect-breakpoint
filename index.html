@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Bootstrap 4 detect breakpoints</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -15,14 +15,15 @@
     </div>
 </div>
 <script src="src/bootstrap-detect-breakpoint.js"></script>
-<script src="./node_modules/jquery/dist/jquery.min.js"></script>
-<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     var $output = $("#breakpoint")
 
     function updateView() {
         var currentBreakpoint = bootstrapDetectBreakpoint()
-        $output.html("name: <b>" + currentBreakpoint.name + "</b>, index: <b>" + currentBreakpoint.index + "</b>")
+        $output.html("{ name: <b>" + currentBreakpoint.name + "</b>, index: <b>" + currentBreakpoint.index + " }</b>")
     }
 
     updateView()
