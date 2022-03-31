@@ -28,7 +28,7 @@ like this
 }
 ```
 
-The index goes from 0 to 4, where 0 is "xs" and 4 is for "xl".
+The index goes from 0 to 5, where 0 is "xs" and 4 is for "xxl".
 
 ## Get it working with Bootstrap 5
 
