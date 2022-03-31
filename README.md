@@ -1,6 +1,6 @@
 # bootstrap-detect-breakpoint
 
-Detect the current Bootstrap 4 breakpoint in JavaScript.
+Detect the current Bootstrap breakpoint in JavaScript.
 
 - [Demo Page](https://shaack.com/projekte/bootstrap-detect-breakpoint/)
 - [npm Package](https://www.npmjs.com/package/bootstrap-detect-breakpoint)
@@ -29,3 +29,16 @@ like this
 ```
 
 The index goes from 0 to 4, where 0 is "xs" and 4 is for "xl".
+
+## Get it working with Bootstrap 5
+
+In Bootstrap 5 there is an [issue that the css variables for breakpoints are missing](https://github.com/twbs/bootstrap/issues/36094). I already created a [pull request](https://github.com/twbs/bootstrap/pull/36095), but I don't know when it will be merged.
+
+You can make this script work with just adding this to your scss
+```scss
+@each $name, $value in $grid-breakpoints {
+  --#{$prefix}breakpoint-#{$name}: #{$value};
+}
+```
+
+
