@@ -34,7 +34,7 @@ The index goes from 0 to 5, where 0 is "xs" and 5 is for "xxl".
 
 In Bootstrap 5 there is an [issue that the css variables for breakpoints are missing](https://github.com/twbs/bootstrap/issues/36094). I already created a [pull request](https://github.com/twbs/bootstrap/pull/36095), but I don't know when or if it will be merged.
 
-Until then you can make the bootstrap-detect-breakpoint script work with just adding this to your scss
+Until then you can make the bootstrap-detect-breakpoint script work with Bootstrap 5 by just adding this to your scss
 ```scss
 :root {
   @each $name, $value in $grid-breakpoints {
