@@ -36,8 +36,10 @@ In Bootstrap 5 there is an [issue that the css variables for breakpoints are mis
 
 You can make this script work with just adding this to your scss
 ```scss
-@each $name, $value in $grid-breakpoints {
-  --#{$prefix}breakpoint-#{$name}: #{$value};
+:root {
+  @each $name, $value in $grid-breakpoints {
+    --bs-breakpoint-#{$name}: #{$value};
+  }
 }
 ```
 
