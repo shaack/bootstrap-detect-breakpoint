@@ -1,3 +1,8 @@
+/**
+ * Author and copyright: Stefan Haack (https://shaack.com)
+ * Repository: https://github.com/shaack/bootstrap-detect-breakpoint
+ * License: MIT, see file 'LICENSE'
+ */
 const bootstrapDetectBreakpoint = function () {
     // cache some values on first call
     if (!this.breakpointValues) {
