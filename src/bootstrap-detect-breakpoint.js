@@ -4,9 +4,9 @@ const bootstrapDetectBreakpoint = function () {
         this.breakpointNames = ["xxl", "xl", "lg", "md", "sm", "xs"]
         this.breakpointValues = []
         const isPriorBS5 = !!window.getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-sm')
-        const selector = isPriorBS5 ? "--breakpoint-" : "--bs-breakpoint-"
+        const prefix = isPriorBS5 ? "--breakpoint-" : "--bs-breakpoint-"
         for (const breakpointName of this.breakpointNames) {
-            const value = window.getComputedStyle(document.documentElement).getPropertyValue(selector + breakpointName)
+            const value = window.getComputedStyle(document.documentElement).getPropertyValue(prefix + breakpointName)
             if(value) {
                 this.breakpointValues[breakpointName] = value
             }
