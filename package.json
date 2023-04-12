@@ -2,7 +2,7 @@
   "name": "bootstrap-detect-breakpoint",
   "version": "1.1.7",
   "description": "Detect the current Bootstrap breakpoint in JavaScript",
-  "main": "index.js",
+  "browser": "./src/bootstrap-detect-breakpoint.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +12,6 @@
   },
   "keywords": [
     "bootstrap",
-    "bootstrap 4",
     "JavaScript",
     "UI"
   ],
